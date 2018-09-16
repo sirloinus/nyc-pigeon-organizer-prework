@@ -6,6 +6,12 @@ describe "NYC Pigeon Organizer" do
 
     before(:all) do
       pigeon_data = {
+        :lives => {
+          "Subway" => ["Theo", "Queenie"],
+          "Central Park" => ["Alex", "Ms. K", "Lucky"],
+          "Library" => ["Peter Jr."],
+          "City Hall" => ["Andrew"]
+        },
         :color => {
           :purple => ["Theo", "Peter Jr.", "Lucky"],
           :grey => ["Theo", "Peter Jr.", "Ms. K"],
@@ -15,12 +21,6 @@ describe "NYC Pigeon Organizer" do
         :gender => {
           :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
           :female => ["Queenie", "Ms. K"]
-        },
-        :lives => {
-          "Subway" => ["Theo", "Queenie"],
-          "Central Park" => ["Alex", "Ms. K", "Lucky"],
-          "Library" => ["Peter Jr."],
-          "City Hall" => ["Andrew"]
         }
       }
       @result = nyc_pigeon_organizer(pigeon_data)
